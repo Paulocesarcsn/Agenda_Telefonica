@@ -1,0 +1,40 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Tempo de geração: 23/11/2019 às 00:54
+-- Versão do servidor: 10.4.8-MariaDB
+-- Versão do PHP: 7.1.32
+
+CREATE DATABASE cadastrosdb;
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+CREATE TABLE `usuarios` (
+  `id` int(1) NOT NULL,
+  `nome` varchar(45) NOT NULL,
+  `telefone` bigint(25) NOT NULL,
+  `telefone2` bigint(25) NOT NULL,
+  `estado` varchar(15) NOT NULL DEFAULT 'Ativo'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `usuarios`
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
